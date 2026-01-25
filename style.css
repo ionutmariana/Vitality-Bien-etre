@@ -1,10 +1,14 @@
 /* STYLE GLOBAL */
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background: #f5f7f2;
     color: #333;
     line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
 }
 
 /* HERO */
@@ -15,10 +19,8 @@ body {
     background-position: center;
     height: 80vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
 }
 
@@ -26,20 +28,39 @@ body {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    z-index: 2;
+    margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 20px;
-    z-index: 2;
 }
 
+/* BADGE ENGLISH */
+.lang-badge {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2f5f3a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* BOUTON PRINCIPAL */
 .cta {
     background: #8fbf7f;
     padding: 12px 25px;
@@ -47,15 +68,17 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    z-index: 2;
+    display: inline-block;
     transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .cta:hover {
     background: #7aad6f;
 }
 
-/* SECTIONS */
+/* SECTIONS GÉNÉRALES */
 section {
     padding: 60px 20px;
     max-width: 1100px;
@@ -66,6 +89,19 @@ h2 {
     text-align: center;
     color: #6a8f6b;
     margin-bottom: 40px;
+}
+
+/* À PROPOS */
+.about p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    text-align: center;
+}
+
+.about-english {
+    text-align: center;
+    font-style: italic;
+    color: #4f6f50;
 }
 
 /* SERVICES */
@@ -94,16 +130,22 @@ h2 {
     color: #6a8f6b;
 }
 
+.service-card p {
+    padding: 0 15px 20px;
+}
+
 /* GALERIE */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
 }
 
 .gallery-grid img {
     width: 100%;
     border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
 }
 
 /* HORAIRES */
@@ -113,19 +155,95 @@ h2 {
     text-align: center;
 }
 
+.hours li {
+    margin-bottom: 8px;
+}
+
 /* AVIS */
 .reviews blockquote {
     background: white;
     padding: 20px;
     margin: 15px auto;
-    max-width: 700px;
+    max-width: 800px;
     border-left: 5px solid #8fbf7f;
     border-radius: 5px;
+    font-style: italic;
+    position: relative;
+}
+
+.review-author {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #4f6f50;
+    font-style: normal;
 }
 
 /* CONTACT */
 .contact {
     text-align: center;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+/* FORMULAIRE DE CONTACT */
+.contact-form {
+    background: #e9f1e6;
+    border-radius: 12px;
+    padding: 50px 20px;
+    max-width: 900px;
+}
+
+.contact-form p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #3f5f40;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #c5d5c2;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #4f6f50;
+}
+
+.form-note a {
+    color: #2f5f3a;
+    text-decoration: underline;
 }
 
 /* FOOTER */
@@ -134,4 +252,25 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .lang-badge {
+        position: static;
+        margin-bottom: 10px;
+    }
 }

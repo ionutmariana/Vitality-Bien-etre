@@ -1,183 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitality & Bien-être</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitality & Bien-être | Massages & Soins</title>
+  <meta name="description" content="Vitality & Bien-être – Un sanctuaire de détente, massages et soins dans une ambiance zen et naturelle." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #FAF9F6;
+      color: #2E2E2E;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #C6A75E;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #b8954f;
+      transform: translateY(-3px);
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+      transition: 0.4s ease;
+      border: 1px solid #C6A75E20;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #C6A75E;
+      margin: 15px auto 0;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #F4EFEA;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 40px auto 0;
+      font-size: 1.1rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 50px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
+    footer {
+      background: #6B8E7A;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      section { padding: 70px 8%; }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- HERO / BANNIÈRE -->
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <div class="lang-badge">English spoken</div>
-            <h1>Vitality & Bien-être</h1>
-            <p>Un espace de détente, d’harmonie et de relaxation</p>
-            <a href="tel:0606413160" class="cta">Prendre rendez-vous</a>
-        </div>
-    </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Vitality & Bien-être</h1>
+      <p>Un sanctuaire de détente, d'harmonie et de ressourcement naturel.</p>
+      <a href="#contact" class="btn">Réserver un moment</a>
+    </div>
+  </section>
 
-    <!-- À PROPOS -->
-    <section class="about">
-        <h2>À propos</h2>
-        <p>
-            Situé à Villeneuve-la-Comptal, Vitality & Bien-être vous accueille dans un cadre apaisant,
-            propice à la relaxation et au ressourcement.  
-            Mariana vous propose des soins personnalisés, adaptés à vos besoins, dans une ambiance zen et naturelle.
-        </p>
-        <p class="about-english">
-            <strong>English spoken :</strong> international clients are welcome for a relaxing and personalized experience.
-        </p>
-    </section>
+  <section>
+    <h2>Nos Soins</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Massage Relaxant</h3>
+        <p>Un moment de lâcher-prise profond pour apaiser le corps et l'esprit.</p>
+      </div>
+      <div class="service-card">
+        <h3>Soin du Visage</h3>
+        <p>Des rituels naturels pour sublimer votre peau et raviver votre éclat.</p>
+      </div>
+      <div class="service-card">
+        <h3>Énergie & Harmonie</h3>
+        <p>Rééquilibrez vos énergies et retrouvez une sérénité intérieure durable.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- SERVICES -->
-    <section class="services">
-        <h2>Nos services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03" alt="Massage relaxant">
-                <h3>Massages relaxants</h3>
-                <p>Un moment de détente profonde pour relâcher les tensions du corps et de l’esprit.</p>
-            </div>
+  <section class="about">
+    <h2>Votre Parenthèse Bien-être</h2>
+    <p>
+      Dans un cadre apaisant et naturel, Vitality & Bien-être vous accueille pour une expérience sensorielle unique.
+      Chaque soin est conçu comme un rituel, pour vous offrir détente, équilibre et régénération.
+    </p>
+  </section>
 
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07c" alt="Soins du visage">
-                <h3>Soins du visage</h3>
-                <p>Des soins naturels pour une peau éclatante, tonifiée et revitalisée.</p>
-            </div>
+  <section class="contact" id="contact">
+    <h2>Contact & Réservation</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+  </section>
 
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35" alt="Énergie & bien-être">
-                <h3>Énergie & bien-être</h3>
-                <p>Rééquilibrage énergétique, réflexologie et techniques douces pour retrouver harmonie et vitalité.</p>
-            </div>
-        </div>
-    </section>
+  <!-- ===== SECTION AVIS GOOGLE ===== -->
+  <section id="avis-google" style="
+    padding: 60px 20px;
+    background: #f5efe6;
+    color: #4a3f35;
+    font-family: 'Arial', sans-serif;
+  ">
+    <h2 style="
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      color: #3b2f2f;
+    ">
+      Avis Google
+    </h2>
 
-    <!-- GALERIE -->
-    <section class="gallery">
-        <h2>Ambiance du salon</h2>
-        <div class="gallery-grid">
-            <!-- 12 photos ambiance massages, nature, zen -->
-            <img src="https://images.unsplash.com/photo-1556228453-efd6e0f6f45f" alt="Ambiance zen">
-            <img src="https://images.unsplash.com/photo-1556229010-aa3f7e3b4f32" alt="Massage relaxant">
-            <img src="https://images.unsplash.com/photo-1556228578-0d85a0e3f4d3" alt="Bougies et détente">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef" alt="Serviettes et spa">
-            <img src="https://images.unsplash.com/photo-1519823551271-9d2a7a4b4a2d" alt="Plantes et bien-être">
-            <img src="https://images.unsplash.com/photo-1544161515-4b8b0bafcd1b" alt="Ambiance nature">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Massage aux huiles">
-            <img src="https://images.unsplash.com/photo-1526402461234-4f3b88c3f3c3" alt="Pierres chaudes">
-            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15" alt="Détail zen">
-            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Massage relaxant">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef" alt="Ambiance spa">
-            <img src="https://images.unsplash.com/photo-1519823551271-9d2a7a4b4a2d" alt="Nature et sérénité">
-        </div>
-    </section>
+    <div style="max-width: 900px; margin: 0 auto;">
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+  <!-- ===== FIN SECTION AVIS GOOGLE ===== -->
 
-    <!-- HORAIRES -->
-    <section class="hours">
-        <h2>Horaires</h2>
-        <ul>
-            <li>Lundi – Vendredi : 09h30 – 12h00 / 17h30 – 20h00</li>
-            <li>Samedi : Fermé</li>
-            <li>Dimanche : Fermé</li>
-        </ul>
-    </section>
-
-    <!-- AVIS CLIENTS -->
-    <section class="reviews">
-        <h2>Avis clients</h2>
-
-        <blockquote>
-            « Pour Noël, une amie m'a offert un massage du visage chez Mariana.
-            Ce fut un moment de détente exceptionnel. Mariana a des doigts de fée, son massage procure un bien-être
-            instantané. J'avais des nœuds dans la nuque dus au stress, Mariana a utilisé ses connaissances pour
-            diminuer ces tensions et je me sens vraiment mieux. Je reviendrai sans aucun doute. Merci pour ce moment. »
-            <span class="review-author">– Flore Schwalm</span>
-        </blockquote>
-
-        <blockquote>
-            « Une amie m’a offert une carte cadeau pour le massage du visage.
-            Accueil parfait. Gentillesse et professionnalisme sont au rendez-vous.
-            Mariana est très douce. Son massage est à la fois tonique et décontractant pour le visage.
-            Je recommande ses soins. »
-            <span class="review-author">– Sandrine Bellemain</span>
-        </blockquote>
-
-        <blockquote>
-            « Vous êtes fatigué(e), épuisé(e) ? Je peux vous dire qu'après la séance de massage ou de réflexologie
-            chez Mariana, vous serez transformé(e)s et rempli(e)s d'énergie (toujours positive).
-            Mariana propose le massage chinois avec différents points d'appuis, elle vous demandera toujours s'il faut
-            augmenter ou diminuer la pression afin que ce soit confortable pour vous.
-            Elle vous fait la réflexologie et... c'est vraiment le pied !
-            Et son massage du visage... un pur bonheur ! Attention à ne pas vous endormir !!! »
-            <span class="review-author">– Tatiana Cestniuc</span>
-        </blockquote>
-
-        <blockquote>
-            « Merci à mon amie Tatiana pour ce cadeau d’anniversaire, le soin visage.
-            On ne voit pas le temps passer sous les mains agiles de Mariana.
-            Se faire masser non seulement le visage mais également la nuque, les épaules, le crâne...
-            un vrai moment de lâcher-prise. »
-            <span class="review-author">– Sylvette Newman</span>
-        </blockquote>
-
-        <blockquote>
-            « Juste un mot : EXCEPTIONNEL. Je recommande, Mariana est très professionnelle. »
-            <span class="review-author">– Caroline Roulet</span>
-        </blockquote>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>📍 9 Chemin des Mouries, 11400 Villeneuve-la-Comptal</p>
-        <p>📞 06 06 41 31 60</p>
-        <a href="https://maps.app.goo.gl/" class="cta" target="_blank" rel="noopener">Voir sur Google Maps</a>
-    </section>
-
-    <!-- FORMULAIRE DE CONTACT -->
-    <section class="contact-form">
-        <h2>Envoyer un message</h2>
-        <p>Pour toute question ou prise de rendez-vous, vous pouvez aussi nous écrire directement :</p>
-
-        <!-- Remplace l’URL Formspree ci-dessous par ton propre endpoint -->
-        <form action="https://formspree.io/f/TON_ENDPOINT_ICI" method="POST">
-            <div class="form-group">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required placeholder="Votre nom">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" required placeholder="Votre email">
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Téléphone (optionnel)</label>
-                <input type="text" id="phone" name="phone" placeholder="Votre numéro de téléphone">
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
-            </div>
-
-            <button type="submit" class="cta">Envoyer</button>
-        </form>
-
-        <p class="form-note">
-            Pour activer ce formulaire, crée un compte gratuit sur <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>,
-            crée un formulaire, puis remplace <code>TON_ENDPOINT_ICI</code> par l’URL fournie.
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2026 Vitality & Bien-être – Site vitrine</p>
-    </footer>
+  <footer>
+    © 2026 Vitality & Bien-être – Tous droits réservés
+  </footer>
 
 </body>
 </html>

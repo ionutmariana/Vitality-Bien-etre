@@ -125,19 +125,20 @@
       font-size: 1.1rem;
     }
 
+    /* TARIFS */
+    .tarif-card {
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.05);
+      border:1px solid #C6A75E20;
+      text-align:center;
+    }
+
     /* AVIS GOOGLE */
     .avis {
       background: #f5efe6;
       text-align: center;
-    }
-
-    .avis img {
-      max-width: 900px;
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      margin-top: 30px;
     }
 
     footer {
@@ -157,6 +158,7 @@
 
 <body>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Vitality & Bien-être</h1>
@@ -165,6 +167,7 @@
     </div>
   </section>
 
+  <!-- SOINS -->
   <section>
     <h2>Nos Soins</h2>
     <div class="services">
@@ -183,6 +186,38 @@
     </div>
   </section>
 
+  <!-- TARIFS -->
+  <section id="tarifs" style="background:#FAF9F6; padding:100px 10%; text-align:center;">
+    <h2>Tarifs</h2>
+
+    <div style="
+      max-width:900px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:30px;
+    ">
+      <div class="tarif-card">
+        <h3>Massage Relaxant – 1h</h3>
+        <p style="color:#4a3f35;">Un soin complet pour apaiser le corps et l’esprit.</p>
+        <p style="font-size:1.4rem; font-weight:600; color:#C6A75E;">60 €</p>
+      </div>
+
+      <div class="tarif-card">
+        <h3>Massage Relaxant – 1h30</h3>
+        <p style="color:#4a3f35;">Une détente profonde pour un lâcher‑prise total.</p>
+        <p style="font-size:1.4rem; font-weight:600; color:#C6A75E;">85 €</p>
+      </div>
+
+      <div class="tarif-card">
+        <h3>Soin du Visage – 1h</h3>
+        <p style="color:#4a3f35;">Un rituel naturel pour revitaliser votre peau.</p>
+        <p style="font-size:1.4rem; font-weight:600; color:#C6A75E;">55 €</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
   <section class="about">
     <h2>Votre Parenthèse Bien-être</h2>
     <p>
@@ -191,37 +226,22 @@
     </p>
   </section>
 
-  <!-- ===== SECTION RÉSERVATION CALENDLY ===== -->
-  <section id="reservation" style="
-    padding: 100px 10%;
-    background: #F4EFEA;
-    text-align: center;
-  ">
-    <h2 style="
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-    ">
-      Réserver un Massage
-    </h2>
+  <!-- CALENDLY -->
+  <section id="reservation" style="background:#F4EFEA; text-align:center;">
+    <h2>Réserver un Massage</h2>
 
-    <p style="
-      max-width: 700px;
-      margin: 0 auto 40px;
-      font-size: 1.1rem;
-      color: #4a3f35;
-    ">
+    <p style="max-width:700px; margin:0 auto 40px; color:#4a3f35;">
       Choisissez directement votre créneau pour un massage bien‑être d’une heure.
       La réservation est simple, rapide et confirmée automatiquement.
     </p>
 
     <div style="
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      max-width:900px;
+      margin:0 auto;
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
     ">
       <div class="calendly-inline-widget"
            data-url="https://calendly.com/mariana-tofan/massage-1-h"
@@ -230,15 +250,13 @@
       <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </section>
-  <!-- ===== FIN SECTION CALENDLY ===== -->
 
-  <!-- ===== SECTION AVIS GOOGLE ===== -->
+  <!-- AVIS GOOGLE -->
   <section id="avis-google" class="avis">
     <h2>Avis Google</h2>
     <script src="https://elfsightcdn.com/platform.js" async></script>
     <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
   </section>
-  <!-- ===== FIN SECTION AVIS GOOGLE ===== -->
 
   <footer>
     © 2026 Vitality & Bien-être – Tous droits réservés

@@ -26,6 +26,57 @@
       padding: 100px 10%;
     }
 
+    /* HEADER + MENU MOBILE */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    #menu-btn {
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    #menu-btn span {
+      height: 3px;
+      background:#2E2E2E;
+      border-radius:3px;
+    }
+
+    #mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100%;
+      background: white;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+      padding: 80px 30px;
+      transition: 0.4s ease;
+      z-index: 999;
+    }
+
+    #mobile-menu a {
+      display:block;
+      margin-bottom:20px;
+      font-size:1.2rem;
+      color:#2E2E2E;
+      text-decoration:none;
+    }
+
     /* HERO */
     .hero {
       height: 100vh;
@@ -36,6 +87,7 @@
       text-align: center;
       color: white;
       position: relative;
+      margin-top: 80px;
     }
 
     .hero::after {
@@ -141,6 +193,25 @@
       text-align: center;
     }
 
+    /* WHATSAPP FLOATING BUTTON */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 2000;
+    }
+
     footer {
       background: #6B8E7A;
       color: white;
@@ -158,6 +229,35 @@
 
 <body>
 
+  <!-- HEADER + MENU MOBILE -->
+  <header>
+    <div style="font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:600;">
+      Vitality & Bien-être
+    </div>
+
+    <div id="menu-btn">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <nav id="mobile-menu">
+    <a href="#about">Votre Parenthèse Bien-être</a>
+    <a href="#soins">Nos Soins</a>
+    <a href="#avis-google">Avis Google</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#reservation">Réserver un Massage</a>
+    <a href="https://wa.me/33606413160">WhatsApp</a>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.onclick = () => {
+      mobileMenu.style.right = mobileMenu.style.right === "0px" ? "-100%" : "0px";
+    };
+  </script>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
@@ -167,8 +267,17 @@
     </div>
   </section>
 
+  <!-- ABOUT FIRST -->
+  <section id="about" class="about">
+    <h2>Votre Parenthèse Bien-être</h2>
+    <p>
+      Dans un cadre apaisant et naturel, Vitality & Bien-être vous accueille pour une expérience sensorielle unique.
+      Chaque soin est conçu comme un rituel, pour vous offrir détente, équilibre et régénération.
+    </p>
+  </section>
+
   <!-- SOINS -->
-  <section>
+  <section id="soins">
     <h2>Nos Soins</h2>
     <div class="services">
       <div class="service-card">
@@ -186,8 +295,15 @@
     </div>
   </section>
 
+  <!-- AVIS GOOGLE -->
+  <section id="avis-google" class="avis">
+    <h2>Avis Google</h2>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
+  </section>
+
   <!-- TARIFS -->
-  <section id="tarifs" style="background:#FAF9F6; padding:100px 10%; text-align:center;">
+  <section id="tarifs" style="background:#FAF9F6; text-align:center;">
     <h2>Tarifs</h2>
 
     <div style="
@@ -217,15 +333,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>Votre Parenthèse Bien-être</h2>
-    <p>
-      Dans un cadre apaisant et naturel, Vitality & Bien-être vous accueille pour une expérience sensorielle unique.
-      Chaque soin est conçu comme un rituel, pour vous offrir détente, équilibre et régénération.
-    </p>
-  </section>
-
   <!-- CALENDLY -->
   <section id="reservation" style="background:#F4EFEA; text-align:center;">
     <h2>Réserver un Massage</h2>
@@ -251,12 +358,8 @@
     </div>
   </section>
 
-  <!-- AVIS GOOGLE -->
-  <section id="avis-google" class="avis">
-    <h2>Avis Google</h2>
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
-  </section>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a class="whatsapp-btn" href="https://wa.me/33606413160" target="_blank">💬</a>
 
   <footer>
     © 2026 Vitality & Bien-être – Tous droits réservés
@@ -264,3 +367,4 @@
 
 </body>
 </html>
+

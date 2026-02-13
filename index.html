@@ -77,15 +77,15 @@
       text-decoration:none;
     }
 
-    /* HERO */
+    /* HERO – SANS IMAGE, AVEC DÉGRADÉ ZEN */
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      background: linear-gradient(135deg, #FAF9F6 0%, #F4EFEA 40%, #6B8E7A 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: white;
+      color: #2E2E2E;
       position: relative;
       margin-top: 80px;
     }
@@ -94,7 +94,8 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.35);
+      background: radial-gradient(circle at top left, rgba(198,167,94,0.25), transparent 55%);
+      pointer-events: none;
     }
 
     .hero-content {

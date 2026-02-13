@@ -77,25 +77,28 @@
       text-decoration:none;
     }
 
-    /* HERO – SANS IMAGE, AVEC DÉGRADÉ ZEN */
+    /* HERO AVEC TON IMAGE */
     .hero {
       height: 100vh;
-      background: linear-gradient(135deg, #FAF9F6 0%, #F4EFEA 40%, #6B8E7A 100%);
+      background: url('https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage.png') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #2E2E2E;
+      color: white;
       position: relative;
       margin-top: 80px;
     }
 
+    /* FILTRE ZEN */
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(198,167,94,0.25), transparent 55%);
-      pointer-events: none;
+      background: linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(198,167,94,0.15)
+      );
     }
 
     .hero-content {

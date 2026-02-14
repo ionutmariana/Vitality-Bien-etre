@@ -9,12 +9,12 @@
   <meta name="description" content="Massages bien-être, soins du visage et relaxation à Castelnaudary. Vitality & Bien-être vous accueille dans un cadre zen et naturel pour un moment de détente absolue." />
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage3.png">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png">
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="Vitality & Bien-être – Massages & Soins à Castelnaudary">
   <meta property="og:description" content="Un sanctuaire de détente, de relaxation et de soins naturels. Massage bien-être, soin du visage, harmonie du corps.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage3.png">
+  <meta property="og:image" content="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ionutmariana.github.io/Vitality-Bien-etre">
 
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vitality & Bien-être – Massages & Soins">
   <meta name="twitter:description" content="Massages, soins du visage et relaxation à Castelnaudary.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage3.png">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png">
 
   <!-- LOCAL BUSINESS SCHEMA -->
   <script type="application/ld+json">
@@ -30,7 +30,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Vitality & Bien-être",
-    "image": "https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage3.png",
+    "image": "https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Castelnaudary",
@@ -118,7 +118,7 @@
     /* HERO */
     .hero {
       height: 100vh;
-      background: url('https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage3.png') center/cover no-repeat;
+      background: url('https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -234,33 +234,30 @@
       text-align: center;
     }
 
-    /* WHATSAPP — visionOS + plus petit + sans texte */
+    /* WHATSAPP — Option B (icône ) */
     .whatsapp-btn {
       position: fixed;
       bottom: 25px;
       right: 25px;
       width: 54px;
       height: 54px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(12px) saturate(180%);
-      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,0.1);
       color: #25D366;
-      font-size: 26px;
+      font-size: 28px;
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      z-index: 2000;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       transition: 0.25s ease;
-      border: 1px solid rgba(255,255,255,0.4);
     }
 
     .whatsapp-btn:hover {
-      transform: translateY(-4px);
-      background: rgba(255, 255, 255, 0.35);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+      background: rgba(255,255,255,0.8);
+      transform: translateY(-3px);
     }
 
     footer {
@@ -331,20 +328,24 @@
   <section id="soins">
     <h2>Nos Soins</h2>
     <div class="services">
-     <div class="service-card">
-  <h3>Soin du Visage</h3>
-  <p>Des rituels naturels pour sublimer votre peau et raviver votre éclat.</p>
-</div>
 
-<div class="service-card">
-  <h3>Massage Relaxant</h3>
-  <p>Un moment de lâcher-prise profond pour apaiser le corps et l'esprit.</p>
-</div>
+      <!-- 1 : Soin du visage -->
+      <div class="service-card">
+        <h3>Soin du Visage</h3>
+        <p>Des rituels naturels pour sublimer votre peau et raviver votre éclat.</p>
+      </div>
 
-<div class="service-card">
-  <h3>Énergie & Harmonie</h3>
-  <p>Rééquilibrez vos énergies et retrouvez une sérénité intérieure durable.</p>
-</div>
+      <!-- 2 : Massage relaxant -->
+      <div class="service-card">
+        <h3>Massage Relaxant</h3>
+        <p>Un moment de lâcher-prise profond pour apaiser le corps et l'esprit.</p>
+      </div>
+
+      <!-- 3 : Énergie & Harmonie -->
+      <div class="service-card">
+        <h3>Énergie & Harmonie</h3>
+        <p>Rééquilibrez vos énergies et retrouvez une sérénité intérieure durable.</p>
+      </div>
 
     </div>
   </section>
@@ -413,7 +414,7 @@
   </section>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a class="whatsapp-btn" href="https://wa.me/33606413160" target="_blank">💬</a>
+  <a class="whatsapp-btn" href="https://wa.me/33606413160" target="_blank"></a>
 
   <footer>
     © 2026 Vitality & Bien-être – Tous droits réservés
@@ -421,4 +422,3 @@
 
 </body>
 </html>
-

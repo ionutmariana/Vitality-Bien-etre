@@ -218,6 +218,19 @@
       font-size: 1.1rem;
     }
 
+    /* À PROPOS DE MARIANA */
+    .apropos {
+      background:#FAF9F6;
+      text-align:center;
+    }
+
+    .apropos p {
+      max-width:800px;
+      margin:20px auto;
+      font-size:1.1rem;
+      color:#4a3f35;
+    }
+
     /* TARIFS */
     .tarif-card {
       background:white;
@@ -291,8 +304,10 @@
   <nav id="mobile-menu">
     <a href="#about">Votre Parenthèse Bien-être</a>
     <a href="#soins">Nos Soins</a>
+    <a href="#mariana">À propos de Mariana</a>
     <a href="#avis-google">Avis Google</a>
     <a href="#tarifs">Tarifs</a>
+    <a href="#cartes-cadeaux">Cartes Cadeaux</a>
     <a href="#reservation">Réserver un Massage</a>
     <a href="https://wa.me/33606413160">WhatsApp</a>
   </nav>
@@ -329,25 +344,49 @@
     <h2>Nos Soins</h2>
     <div class="services">
 
-      <!-- 1 : Soin du visage -->
       <div class="service-card">
         <h3>Soin du Visage</h3>
         <p>Des rituels naturels pour sublimer votre peau et raviver votre éclat.</p>
       </div>
 
-      <!-- 2 : Massage relaxant -->
       <div class="service-card">
         <h3>Massage Relaxant</h3>
         <p>Un moment de lâcher-prise profond pour apaiser le corps et l'esprit.</p>
       </div>
 
-      <!-- 3 : Énergie & Harmonie -->
       <div class="service-card">
         <h3>Énergie & Harmonie</h3>
         <p>Rééquilibrez vos énergies et retrouvez une sérénité intérieure durable.</p>
       </div>
 
     </div>
+  </section>
+
+  <!-- À PROPOS DE MARIANA -->
+  <section id="mariana" class="apropos">
+    <h2>À propos de Mariana</h2>
+
+    <p>
+      Je m’appelle <strong>Mariana</strong>, praticienne en massages bien‑être et soins naturels.
+      Passionnée par l’humain, l’écoute et l’harmonie du corps, j’ai créé Vitality & Bien‑être
+      pour offrir un espace où chacun peut se reconnecter à soi.
+    </p>
+
+    <p>
+      Chaque soin est pour moi un moment unique : un mélange de douceur, de présence et d’attention,
+      pour vous aider à relâcher les tensions, apaiser le mental et retrouver une énergie plus fluide.
+    </p>
+
+    <p>
+      <strong>Parce qu’au fond, chacun mérite un instant pour souffler, relâcher la pression
+      et se libérer des tracas du quotidien.</strong>
+    </p>
+
+    <p>
+      Mon approche est simple : <strong>bienveillance, authenticité et respect du rythme de chacun</strong>.
+      Je vous accueille dans un cadre apaisant, pensé pour favoriser la détente profonde
+      et vous offrir une véritable parenthèse hors du temps.
+    </p>
   </section>
 
   <!-- AVIS GOOGLE -->
@@ -388,7 +427,50 @@
     </div>
   </section>
 
-  <!-- CALENDLY -->
+  <!-- CARTES CADEAUX -->
+  <section id="cartes-cadeaux" style="background:#F4EFEA; text-align:center; padding:100px 10%;">
+    <h2>Cartes Cadeaux</h2>
+
+    <p style="max-width:800px; margin:20px auto; font-size:1.1rem; color:#4a3f35;">
+      Offrez un moment de détente, de douceur et de reconnexion.  
+      Les cartes cadeaux Vitality & Bien‑être sont valables sur tous les soins :  
+      massages relaxants, soins du visage et rituels bien‑être.
+    </p>
+
+    <div style="
+      max-width:900px;
+      margin:40px auto 0;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:30px;
+    ">
+
+      <div class="tarif-card">
+        <h3>Carte Cadeau – 1h</h3>
+        <p style="color:#4a3f35;">Massage relaxant ou soin du visage.</p>
+        <p style="font-size:1.4rem; font-weight:600; color:#C6A75E;">60 €</p>
+      </div>
+
+      <div class="tarif-card">
+        <h3>Carte Cadeau – 1h30</h3>
+        <p style="color:#4a3f35;">Un moment de détente profonde.</p>
+        <p style="font-size:1.4rem; font-weight:600; color:#C6A75E;">85 €</p>
+      </div>
+
+      <div class="tarif-card">
+        <h3>Montant Libre</h3>
+        <p style="color:#4a3f35;">Choisissez le montant de votre choix.</p>
+        <p style="font-size:1.4rem; font-weight:600; color:#C6A75E;">À partir de 30 €</p>
+      </div>
+
+    </div>
+
+    <a href="#reservation" class="btn" style="margin-top:40px; display:inline-block;">
+      Offrir une carte cadeau
+    </a>
+  </section>
+
+  <!-- RÉSERVATION / CALENDLY -->
   <section id="reservation" style="background:#F4EFEA; text-align:center;">
     <h2>Réserver un Massage</h2>
 
@@ -414,7 +496,7 @@
   </section>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a class="whatsapp-btn" href="https://wa.me/33606413160" target="_blank">✆</a>
+  <a class="whatsapp-btn" href="https://wa.me/33606413160" target="_blank"></a>
 
   <footer>
     © 2026 Vitality & Bien-être – Tous droits réservés
@@ -422,6 +504,3 @@
 
 </body>
 </html>
-
-
-

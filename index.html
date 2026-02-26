@@ -77,7 +77,7 @@
       text-decoration:none;
     }
 
-    /* HERO */
+    /* HERO AVEC TON IMAGE */
     .hero {
       height: 100vh;
       background: url('https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage.png') center/cover no-repeat;
@@ -90,6 +90,7 @@
       margin-top: 80px;
     }
 
+    /* FILTRE ZEN HARMONISÉ */
     .hero::after {
       content: "";
       position: absolute;
@@ -119,108 +120,3 @@
     .btn {
       background: #C6A75E;
       color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #b0904f;
-    }
-
-    /* TARIFS */
-    .tarifs {
-      background: #fff;
-      border-radius: 15px;
-      padding: 40px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    .tarif-item {
-      margin-bottom: 20px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .tarif-item:last-child {
-      border-bottom: none;
-    }
-
-    .tarif-item h3 {
-      font-size: 1.4rem;
-      margin-bottom: 5px;
-    }
-
-    .tarif-item p {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h2>Vitality & Bien-être</h2>
-  <div id="menu-btn">
-    <span></span><span></span><span></span>
-  </div>
-</header>
-
-<div id="mobile-menu">
-  <a href="#avis">Avis</a>
-  <a href="#tarifs">Tarifs</a>
-</div>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Massages & Soins Bien-être</h1>
-    <p>Un espace dédié à la détente, l’harmonie et la revitalisation.</p>
-    <a href="#tarifs" class="btn">Voir les tarifs</a>
-  </div>
-</section>
-
-<!-- ⭐⭐⭐ AVIS GOOGLE (AVANT TARIFS) ⭐⭐⭐ -->
-<section id="avis">
-  <h2 style="text-align:center; margin-bottom:40px;">Avis Google</h2>
-
-  <!-- Elfsight Google Reviews -->
-  <script src="https://elfsightcdn.com/platform.js" async></script>
-  <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
-</section>
-
-<!-- ⭐⭐⭐ TARIFS ⭐⭐⭐ -->
-<section id="tarifs">
-  <h2 style="text-align:center; margin-bottom:40px;">Tarifs</h2>
-
-  <div class="tarifs">
-    <div class="tarif-item">
-      <h3>Massage Relaxant – 1h</h3>
-      <p>60 €</p>
-    </div>
-
-    <div class="tarif-item">
-      <h3>Massage Californien – 1h</h3>
-      <p>65 €</p>
-    </div>
-
-    <div class="tarif-item">
-      <h3>Massage Deep Tissue – 1h</h3>
-      <p>70 €</p>
-    </div>
-  </div>
-</section>
-
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  menuBtn.onclick = () => {
-    mobileMenu.style.right = mobileMenu.style.right === "0px" ? "-100%" : "0px";
-  };
-</script>
-
-</body>
-</html>

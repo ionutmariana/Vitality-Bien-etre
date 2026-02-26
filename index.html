@@ -32,7 +32,6 @@
       padding: 100px 10%;
     }
 
-    /* HEADER */
     header {
       position: fixed;
       top: 0;
@@ -83,7 +82,6 @@
       text-decoration:none;
     }
 
-    /* HERO */
     .hero {
       height: 100vh;
       background: url('https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png') center/cover no-repeat;
@@ -129,7 +127,6 @@
       transform: translateY(-3px);
     }
 
-    /* TEXTES CENTRÉS */
     .about p,
     .apropos p,
     #soins p {
@@ -140,7 +137,6 @@
       color:#4a3f35;
     }
 
-    /* SERVICES */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -170,6 +166,16 @@
       section { padding: 70px 8%; }
     }
   </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48Y537E5CY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-48Y537E5CY');
+  </script>
+
 </head>
 
 <body>
@@ -187,7 +193,8 @@
 <nav id="mobile-menu">
   <a href="#about">Votre Parenthèse Bien-être</a>
   <a href="#soins">Nos Soins</a>
-  <a href="#mariana">À propos de Mariana</a>
+  <a href="#mariana">À propos de moi</a>
+  <a href="#avis">Avis</a>
   <a href="#tarifs">Tarifs</a>
   <a href="#cartes-cadeaux">Cartes Cadeaux</a>
   <a href="#reservation">Réserver</a>
@@ -201,7 +208,6 @@
   };
 </script>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Des soins bien‑être pour les femmes, dans un cadre calme et naturel.</h1>
@@ -209,7 +215,6 @@
   </div>
 </section>
 
-<!-- PARENTHESE BIEN-ETRE -->
 <section id="about" class="about">
   <h2>Votre Parenthèse Bien‑être</h2>
   <p>
@@ -219,7 +224,6 @@
   </p>
 </section>
 
-<!-- À PROPOS -->
 <section id="mariana" class="apropos">
   <h2>À propos de moi</h2>
   <p>
@@ -236,7 +240,6 @@
   </p>
 </section>
 
-<!-- NOS SOINS -->
 <section id="soins">
   <h2>Nos Soins</h2>
 
@@ -276,16 +279,12 @@
   </div>
 </section>
 
-  <!-- AVIS GOOGLE -->
 <section id="avis" style="padding: 80px 10%; text-align:center;">
   <h2>Avis</h2>
-
-  <!-- Elfsight Google Reviews -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
 </section>
 
-<!-- TARIFS -->
 <section id="tarifs" style="background:#FAF9F6; text-align:center;">
   <h2>Tarifs</h2>
 
@@ -302,14 +301,12 @@
   </div>
 </section>
 
-<!-- CARTES CADEAUX -->
 <section id="cartes-cadeaux" style="background:#F4EFEA; text-align:center;">
   <h2>Cartes Cadeaux</h2>
   <p>Offrez un moment simple et apaisant à une femme de votre entourage.</p>
   <a href="#reservation" class="btn" style="margin-top:20px;">Offrir une carte cadeau</a>
 </section>
 
-<!-- RESERVATION -->
 <section id="reservation" style="background:#F4EFEA; text-align:center;">
   <h2>Réserver un soin</h2>
   <div class="calendly-inline-widget"
@@ -325,6 +322,3 @@
 
 </body>
 </html>
-
-
-

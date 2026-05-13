@@ -18,6 +18,7 @@
     <!-- ===== ANCRES DISCRÈTES (cercles dans le coin droit) ===== -->
     <div class="nav-dots">
         <a href="#header" class="dot active" data-section="header"></a>
+        <a href="#hero" class="dot" data-section="hero"></a>
         <a href="#parenthese" class="dot" data-section="parenthese"></a>
         <a href="#apropos" class="dot" data-section="apropos"></a>
         <a href="#soins" class="dot" data-section="soins"></a>
@@ -35,6 +36,17 @@
             <a href="https://calendly.com/mariana-tofan/massage-1-h" class="btn btn-primary" target="_blank">📅 Réserver un soin</a>
         </div>
     </header>
+
+    <!-- ===== TES IMAGES HERO (rajoutées) ===== -->
+    <section id="hero" class="hero-section fade-section">
+        <div class="container">
+            <div class="hero-images">
+                <img src="hero-massage.png" alt="Massage bien-être" class="hero-img">
+                <img src="hero-massage2.png" alt="Soin du visage" class="hero-img">
+                <img src="hero-massage3.png" alt="Massage Tui Na" class="hero-img">
+            </div>
+        </div>
+    </section>
 
     <main>
         <section id="parenthese" class="parenthese fade-section">
@@ -84,8 +96,9 @@
         <section id="avis" class="avis fade-section">
             <div class="container">
                 <h2>⭐ Avis</h2>
-  <script src="https://elfsightcdn.com/platform.js" async></script>
-  <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
+            </div>
         </section>
 
         <section id="tarifs" class="tarifs fade-section">
@@ -141,14 +154,11 @@
 
     <script src="script.js"></script>
     
-    <!-- Script pour l'effet de fondu au scroll et l'activation des ancres -->
     <script>
         (function() {
-            // Sélectionne toutes les sections avec effet de fondu
             const fadeSections = document.querySelectorAll('.fade-section');
             const dots = document.querySelectorAll('.dot');
             
-            // Crée un observateur pour l'effet de fondu
             const fadeObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -159,15 +169,12 @@
             
             fadeSections.forEach(section => {
                 fadeObserver.observe(section);
-                // Ajoute la classe de base pour la transition
                 section.classList.add('fade-transition');
             });
             
-            // Active le premier élément visible au chargement
             setTimeout(() => {
                 const sections = document.querySelectorAll('section[id], header[id]');
                 const scrollPos = window.scrollY + 150;
-                
                 let currentIndex = 0;
                 for (let i = 0; i < sections.length; i++) {
                     const section = sections[i];
@@ -176,7 +183,6 @@
                         currentIndex = i;
                     }
                 }
-                
                 dots.forEach((dot, index) => {
                     dot.classList.remove('active');
                     if (index === currentIndex) {
@@ -185,11 +191,9 @@
                 });
             }, 100);
             
-            // Suit la section visible pendant le scroll (pour les ancres)
             window.addEventListener('scroll', () => {
                 const sections = document.querySelectorAll('section[id], header[id]');
                 const scrollPos = window.scrollY + 150;
-                
                 let currentIndex = 0;
                 for (let i = 0; i < sections.length; i++) {
                     const section = sections[i];
@@ -203,7 +207,6 @@
                         currentIndex = i;
                     }
                 }
-                
                 dots.forEach((dot, index) => {
                     dot.classList.remove('active');
                     if (index === currentIndex) {
@@ -212,8 +215,7 @@
                 });
             });
             
-            // Scroll fluide quand on clique sur un cercle
-            dots.forEach((dot, index) => {
+            dots.forEach((dot) => {
                 dot.addEventListener('click', (e) => {
                     e.preventDefault();
                     const targetId = dot.getAttribute('href');

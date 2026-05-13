@@ -7,8 +7,8 @@
 
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    background-color: #FDFBF7;
-    color: #2D3E2B;
+    background-color: #fff;
+    color: #1a1a1a;
     line-height: 1.5;
 }
 
@@ -18,31 +18,32 @@ body {
     padding: 1.5rem;
 }
 
-/* ===== TYPOGRAPHIE ===== */
+/* ===== TYPOGRAPHIE CENTRÉE ===== */
+h1, h2, h3, .tagline, .btn, .btn-primary, .btn-secondary, .infos-card p, .tarifs-list, .cartes p {
+    text-align: center;
+}
+
 h1 {
     font-size: 2.2rem;
     font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #4A6B4A;
+    color: #222;
 }
 
 h2 {
     font-size: 1.8rem;
     font-weight: 500;
-    color: #4A6B4A;
+    color: #222;
     margin-bottom: 1.5rem;
-    border-left: 4px solid #C9A87C;
-    padding-left: 1rem;
 }
 
 h3 {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #5C7C5A;
+    color: #222;
     margin-bottom: 0.5rem;
 }
 
-/* ===== BOUTONS ===== */
+/* ===== BOUTONS CENTRÉS ===== */
 .btn, .btn-primary, .btn-secondary {
     display: inline-block;
     padding: 0.8rem 1.8rem;
@@ -55,39 +56,55 @@ h3 {
 }
 
 .btn-primary {
-    background-color: #7B9E7B;
+    background-color: #222;
     color: white;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #5C7C5A;
+    background-color: #444;
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #7B9E7B;
-    border: 2px solid #7B9E7B;
+    color: #222;
+    border: 2px solid #222;
 }
 
 .btn-secondary:hover {
-    background-color: #7B9E7B;
+    background-color: #222;
     color: white;
 }
 
 /* ===== HEADER ===== */
 .header {
-    background: linear-gradient(135deg, #F0F0E8 0%, #E8E4D8 100%);
     text-align: center;
     padding: 2rem 0 3rem;
 }
 
 .tagline {
     font-size: 1.2rem;
-    color: #6B5B4B;
+    color: #555;
     margin: 1rem 0 1.5rem;
+}
+
+/* ===== SECTION HERO IMAGES ===== */
+.hero-section {
+    margin: 1rem 0 2rem;
+}
+
+.hero-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-img {
+    max-width: 30%;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* ===== SECTIONS ===== */
@@ -95,10 +112,9 @@ section {
     margin: 2rem 0;
 }
 
-.apropos, .infos, .cartes, .calendly-section {
-    background-color: #F7F4EE;
-    border-radius: 32px;
-    margin: 2rem 0;
+.parenthese, .apropos, .soins, .avis, .tarifs, .infos, .cartes, .calendly-section {
+    background-color: #fff;
+    border-radius: 24px;
 }
 
 /* ===== GRILLE DES SOINS ===== */
@@ -110,21 +126,22 @@ section {
 }
 
 .soin-card {
-    background: white;
-    border-radius: 28px;
+    background: #f9f9f9;
+    border-radius: 24px;
     padding: 1.8rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.2s ease;
+    text-align: center;
 }
 
 .soin-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .duree {
     font-size: 0.9rem;
-    color: #C9A87C;
+    color: #888;
     font-weight: 500;
     margin-bottom: 0.8rem;
 }
@@ -132,7 +149,7 @@ section {
 .prix {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4A6B4A;
+    color: #222;
     margin-top: 1rem;
 }
 
@@ -140,20 +157,24 @@ section {
 .tarifs-list {
     list-style: none;
     padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .tarifs-list li {
     padding: 0.8rem 0;
-    border-bottom: 1px solid #E8E4D8;
+    border-bottom: 1px solid #eee;
     font-size: 1.1rem;
 }
 
 /* ===== CARTE INFOS ===== */
 .infos-card {
-    background: white;
-    border-radius: 28px;
+    background: #f9f9f9;
+    border-radius: 24px;
     padding: 1.8rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .infos-card p {
@@ -161,17 +182,14 @@ section {
 }
 
 .infos-card a {
-    color: #7B9E7B;
-    text-decoration: none;
-}
-
-.infos-card a:hover {
+    color: #222;
     text-decoration: underline;
 }
 
 .infos-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     margin-top: 1.2rem;
 }
@@ -185,13 +203,13 @@ section {
 .footer {
     text-align: center;
     padding: 2rem 0;
-    background-color: #E8E4D8;
+    background-color: #f5f5f5;
     margin-top: 3rem;
     font-size: 0.9rem;
 }
 
 .footer a {
-    color: #4A6B4A;
+    color: #222;
     text-decoration: none;
 }
 
@@ -207,7 +225,7 @@ section {
     transform: translateY(0);
 }
 
-/* ===== ANCRES DISCRÈTES (cercles dans le coin droit) ===== */
+/* ===== ANCRES DISCRÈTES ===== */
 .nav-dots {
     position: fixed;
     right: 20px;
@@ -217,11 +235,11 @@ section {
     flex-direction: column;
     gap: 12px;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
     padding: 12px 8px;
     border-radius: 40px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .dot {
@@ -229,25 +247,25 @@ section {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #C9A87C;
-    opacity: 0.4;
+    background-color: #999;
+    opacity: 0.5;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .dot:hover {
-    opacity: 0.8;
+    opacity: 1;
     transform: scale(1.2);
 }
 
 .dot.active {
     opacity: 1;
-    background-color: #7B9E7B;
+    background-color: #222;
     transform: scale(1.3);
-    box-shadow: 0 0 0 3px rgba(123, 158, 123, 0.3);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
 }
 
-/* ===== RESPONSIVE (MOBILE) ===== */
+/* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -263,30 +281,20 @@ section {
     
     .soins-grid {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
+        gap: 1rem;
     }
     
-    .btn-primary, .btn-secondary {
-        padding: 0.7rem 1.4rem;
-        font-size: 0.95rem;
+    .hero-img {
+        max-width: 80%;
     }
     
     .infos-links {
         flex-direction: column;
+        align-items: center;
     }
     
-    .infos-links .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .calendly-inline-widget {
-        height: 600px !important;
-    }
-    
-    /* Sur mobile, les ancres sont plus petites et discrètes */
     .nav-dots {
-        right: 12px;
+        right: 10px;
         gap: 8px;
         padding: 8px 6px;
     }
@@ -295,15 +303,4 @@ section {
         width: 8px;
         height: 8px;
     }
-}
-
-/* ===== PETITS DÉTAILS ===== */
-::selection {
-    background-color: #C9A87C;
-    color: white;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }

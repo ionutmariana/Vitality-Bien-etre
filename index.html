@@ -53,6 +53,7 @@
       flex-direction: column;
       justify-content: space-between;
       cursor: pointer;
+      z-index: 1001;
     }
 
     #menu-btn span {
@@ -61,25 +62,26 @@
       border-radius:3px;
     }
 
+    /* MENU MOBILE À GAUCHE */
     #mobile-menu {
       position: fixed;
       top: 0;
-      right: -100%;
+      left: -100%;
       width: 70%;
       height: 100%;
       background: white;
-      box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+      box-shadow: 5px 0 20px rgba(0,0,0,0.1);
       padding: 80px 30px;
       transition: 0.4s ease;
       z-index: 999;
     }
 
     #mobile-menu a {
-      display:block;
-      margin-bottom:20px;
-      font-size:1.2rem;
-      color:#2E2E2E;
-      text-decoration:none;
+      display: block;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #2E2E2E;
+      text-decoration: none;
     }
 
     .hero {
@@ -266,16 +268,17 @@
 </div>
 
 <header>
-  <div style="font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:600;">
-    Vitality & Bien-être
-  </div>
-
   <div id="menu-btn">
     <span></span><span></span><span></span>
+  </div>
+  <div style="font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:600;">
+    Vitality & Bien-être
   </div>
 </header>
 
 <nav id="mobile-menu">
+  <a href="index.html">Accueil</a>
+  <a href="blog.html">📝 Blog & Conseils</a>
   <a href="#about">Votre Parenthèse Bien-être</a>
   <a href="#soins">Nos Soins</a>
   <a href="#mariana">À propos de moi</a>
@@ -288,9 +291,20 @@
 <script>
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
+
   menuBtn.onclick = () => {
-    mobileMenu.style.right = mobileMenu.style.right === "0px" ? "-100%" : "0px";
+    if (mobileMenu.style.left === "0px") {
+      mobileMenu.style.left = "-100%";
+    } else {
+      mobileMenu.style.left = "0px";
+    }
   };
+
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.style.left = "-100%";
+    });
+  });
 </script>
 
 <section id="hero-section" class="hero fade-section">
@@ -405,13 +419,11 @@
   © 2026 Vitality & Bien-être – Réservé aux femmes
 </footer>
 
-<!-- Script pour l'effet de fondu au scroll et l'activation des ancres -->
 <script>
   (function() {
     const fadeSections = document.querySelectorAll('.fade-section');
     const dots = document.querySelectorAll('.dot');
     
-    // Observateur pour l'effet de fondu
     const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -424,7 +436,6 @@
       fadeObserver.observe(section);
     });
     
-    // Mise à jour du cercle actif pendant le scroll
     function updateActiveDot() {
       const sections = [
         document.getElementById('hero-section'),
@@ -467,7 +478,6 @@
     window.addEventListener('resize', updateActiveDot);
     setTimeout(updateActiveDot, 100);
     
-    // Scroll fluide au clic sur un cercle
     dots.forEach((dot, index) => {
       dot.addEventListener('click', (e) => {
         e.preventDefault();

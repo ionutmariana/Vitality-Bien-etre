@@ -1,306 +1,277 @@
-/* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* STYLE GLOBAL */
 body {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    background-color: #fff;
-    color: #1a1a1a;
-    line-height: 1.5;
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f7f2;
+    color: #333;
+    line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
+h1, h2, h3 {
+    margin: 0;
 }
 
-/* ===== TYPOGRAPHIE CENTRÉE ===== */
-h1, h2, h3, .tagline, .btn, .btn-primary, .btn-secondary, .infos-card p, .tarifs-list, .cartes p {
+/* HERO */
+.hero {
+    position: relative;
+    /* nouvelle photo plus chaleureuse */
+    background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.35); /* un peu moins sombre pour mieux voir la photo */
+}
+
+.hero-content {
+    position: relative;
     text-align: center;
+    padding: 0 20px;
 }
 
-h1 {
-    font-size: 2.2rem;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* BADGE ENGLISH */
+.lang-badge {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2f5f3a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
     font-weight: 600;
-    color: #222;
+}
+
+/* BOUTON PRINCIPAL */
+.cta {
+    background: #8fbf7f;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background: #7aad6f;
+}
+
+/* SECTIONS GÉNÉRALES */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #222;
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 0.5rem;
-}
-
-/* ===== BOUTONS CENTRÉS ===== */
-.btn, .btn-primary, .btn-secondary {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
     text-align: center;
-    cursor: pointer;
+    color: #6a8f6b;
+    margin-bottom: 40px;
 }
 
-.btn-primary {
-    background-color: #222;
-    color: white;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #444;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #222;
-    border: 2px solid #222;
-}
-
-.btn-secondary:hover {
-    background-color: #222;
-    color: white;
-}
-
-/* ===== HEADER ===== */
-.header {
+/* À PROPOS */
+.about p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
     text-align: center;
-    padding: 2rem 0 3rem;
 }
 
-.tagline {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 1rem 0 1.5rem;
+.about-english {
+    text-align: center;
+    font-style: italic;
+    color: #4f6f50;
 }
 
-/* ===== SECTION HERO IMAGES ===== */
-.hero-section {
-    margin: 1rem 0 2rem;
-}
-
-.hero-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.hero-img {
-    max-width: 30%;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* ===== SECTIONS ===== */
-section {
-    margin: 2rem 0;
-}
-
-.parenthese, .apropos, .soins, .avis, .tarifs, .infos, .cartes, .calendly-section {
-    background-color: #fff;
-    border-radius: 24px;
-}
-
-/* ===== GRILLE DES SOINS ===== */
-.soins-grid {
+/* SERVICES */
+.service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.8rem;
-    margin-top: 1rem;
+    gap: 25px;
 }
 
-.soin-card {
-    background: #f9f9f9;
-    border-radius: 24px;
-    padding: 1.8rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+.service-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.soin-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.duree {
-    font-size: 0.9rem;
-    color: #888;
-    font-weight: 500;
-    margin-bottom: 0.8rem;
+.service-card h3 {
+    margin: 15px 0 5px;
+    color: #6a8f6b;
 }
 
-.prix {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #222;
-    margin-top: 1rem;
+.service-card p {
+    padding: 0 15px 20px;
 }
 
-/* ===== TARIFS ===== */
-.tarifs-list {
+/* GALERIE */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* HORAIRES */
+.hours ul {
     list-style: none;
     padding: 0;
-    max-width: 400px;
+    text-align: center;
+}
+
+.hours li {
+    margin-bottom: 8px;
+}
+
+/* AVIS */
+.reviews blockquote {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    border-left: 5px solid #8fbf7f;
+    border-radius: 5px;
+    font-style: italic;
+    position: relative;
+}
+
+.review-author {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #4f6f50;
+    font-style: normal;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+/* FORMULAIRE DE CONTACT */
+.contact-form {
+    background: #e9f1e6;
+    border-radius: 12px;
+    padding: 50px 20px;
+    max-width: 900px;
+}
+
+.contact-form p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+form {
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.tarifs-list li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #eee;
-    font-size: 1.1rem;
+.form-group {
+    margin-bottom: 15px;
 }
 
-/* ===== CARTE INFOS ===== */
-.infos-card {
-    background: #f9f9f9;
-    border-radius: 24px;
-    padding: 1.8rem;
-    max-width: 500px;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #3f5f40;
 }
 
-.infos-card p {
-    margin-bottom: 0.8rem;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #c5d5c2;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
-.infos-card a {
-    color: #222;
+textarea {
+    resize: vertical;
+}
+
+.form-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #4f6f50;
+}
+
+.form-note a {
+    color: #2f5f3a;
     text-decoration: underline;
 }
 
-.infos-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.2rem;
-}
-
-/* ===== AVIS ===== */
-.avis {
+/* FOOTER */
+footer {
+    background: #6a8f6b;
+    color: white;
     text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: #f5f5f5;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-}
-
-.footer a {
-    color: #222;
-    text-decoration: none;
-}
-
-/* ===== EFFET DE FONDU AU SCROLL ===== */
-.fade-transition {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-transition.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== ANCRES DISCRÈTES ===== */
-.nav-dots {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(8px);
-    padding: 12px 8px;
-    border-radius: 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.dot {
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #999;
-    opacity: 0.5;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.dot:hover {
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.dot.active {
-    opacity: 1;
-    background-color: #222;
-    transform: scale(1.3);
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
-}
-
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero {
+        height: 70vh;
     }
-    
-    h1 {
-        font-size: 1.8rem;
+
+    .hero h1 {
+        font-size: 2.2rem;
     }
-    
-    h2 {
-        font-size: 1.5rem;
+
+    .hero p {
+        font-size: 1.1rem;
     }
-    
-    .soins-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .hero-img {
-        max-width: 80%;
-    }
-    
-    .infos-links {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-dots {
-        right: 10px;
-        gap: 8px;
-        padding: 8px 6px;
-    }
-    
-    .dot {
-        width: 8px;
-        height: 8px;
+
+    .lang-badge {
+        position: static;
+        margin-bottom: 10px;
     }
 }

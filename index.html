@@ -1,324 +1,232 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Vitality & Bien-être | Massages & Soins à Castelnaudary</title>
-
-  <meta name="description" content="Massages bien-être pour femmes, soins du visage, réflexologie et massage Tui Na à Castelnaudary. Un cadre calme et naturel pour se détendre simplement." />
-
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #FAF9F6;
-      color: #2E2E2E;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    section {
-      padding: 100px 10%;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      background: rgba(255,255,255,0.8);
-      backdrop-filter: blur(8px);
-    }
-
-    #menu-btn {
-      width: 30px;
-      height: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    #menu-btn span {
-      height: 3px;
-      background:#2E2E2E;
-      border-radius:3px;
-    }
-
-    #mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100%;
-      background: white;
-      box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-      padding: 80px 30px;
-      transition: 0.4s ease;
-      z-index: 999;
-    }
-
-    #mobile-menu a {
-      display:block;
-      margin-bottom:20px;
-      font-size:1.2rem;
-      color:#2E2E2E;
-      text-decoration:none;
-    }
-
-    .hero {
-      height: 100vh;
-      background: url('https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-      margin-top: 80px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(198,167,94,0.20);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-    }
-
-    .hero h1 {
-      font-size: 2.6rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      background: #C6A75E;
-      color: white;
-      padding: 14px 32px;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background: #b8954f;
-      transform: translateY(-3px);
-    }
-
-    .about p,
-    .apropos p,
-    #soins p {
-      max-width: 800px;
-      margin: 20px auto;
-      text-align: center;
-      font-size: 1.1rem;
-      color:#4a3f35;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      margin-top: 60px;
-    }
-
-    .service-card {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-      border: 1px solid #C6A75E20;
-      text-align: center;
-    }
-
-    footer {
-      background: #6B8E7A;
-      color: white;
-      padding: 40px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      section { padding: 70px 8%; }
-    }
-  </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-48Y537E5CY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-48Y537E5CY');
-  </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <meta name="description" content="Mariana propose des massages bien-être pour femmes à Castelnaudary. Massage visage, réflexologie, Tui Na. Avis Google, prise RDV en ligne. Cadre calme et naturel.">
+    <meta name="geo.placename" content="Castelnaudary, France">
+    <meta name="geo.region" content="FR-11">
+    <meta name="google-site-verification" content="google36327a720752aa41">
+    
+    <title>Vitality & Bien-être – Soins bien-être pour femmes à Castelnaudary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
 </head>
-
 <body>
 
-<header>
-  <div style="font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:600;">
-    Vitality & Bien-être
-  </div>
-
-  <div id="menu-btn">
-    <span></span><span></span><span></span>
-  </div>
-</header>
-
-<nav id="mobile-menu">
-  <a href="#about">Votre Parenthèse Bien-être</a>
-  <a href="#soins">Nos Soins</a>
-  <a href="#mariana">À propos de moi</a>
-  <a href="#avis">Avis</a>
-  <a href="#tarifs">Tarifs</a>
-  <a href="#cartes-cadeaux">Cartes Cadeaux</a>
-  <a href="#reservation">Réserver</a>
-</nav>
-
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  menuBtn.onclick = () => {
-    mobileMenu.style.right = mobileMenu.style.right === "0px" ? "-100%" : "0px";
-  };
-</script>
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Des soins bien‑être pour les femmes, dans un cadre calme et naturel.</h1>
-    <a href="#reservation" class="btn">Réserver un soin</a>
-  </div>
-</section>
-
-<section id="about" class="about">
-  <h2>Votre Parenthèse Bien‑être</h2>
-  <p>
-    Un espace calme et naturel, réservé aux femmes, pour faire une pause dans le rythme du quotidien.
-    Ici, on prend le temps de se détendre, sans pression et sans artifice.
-    Chaque soin est proposé avec douceur, en respectant les besoins de chacune.
-  </p>
-</section>
-
-<section id="mariana" class="apropos">
-  <h2>À propos de moi</h2>
-  <p>
-    Je m’appelle Mariana et je suis praticienne en massages bien‑être.
-    J’accompagne uniquement les femmes, dans un cadre calme et respectueux.
-  </p>
-  <p>
-    Mon approche est simple et naturelle. Je prends le temps d’écouter et d’adapter chaque soin
-    en fonction des besoins de chacune.
-  </p>
-  <p>
-    Ici, pas de grands discours. Juste un moment pour se poser, se détendre et souffler,
-    en toute simplicité.
-  </p>
-</section>
-
-<section id="soins">
-  <h2>Nos Soins</h2>
-
-  <div class="services">
-
-    <div class="service-card">
-      <h3>Massage du Visage — 1h</h3>
-      <p>
-        Un soin doux et complet, adapté à tous les types de peaux.
-        Il aide à lisser les traits, à détendre les muscles du visage et à tonifier les zones de soutien de la peau.
-        Ce massage est particulièrement apprécié pour prévenir l’apparition des signes de l’âge
-        et retrouver un teint reposé et lumineux.
-      </p>
+    <!-- ===== ANCRES DISCRÈTES (cercles dans le coin droit) ===== -->
+    <div class="nav-dots">
+        <a href="#header" class="dot active" data-section="header"></a>
+        <a href="#parenthese" class="dot" data-section="parenthese"></a>
+        <a href="#apropos" class="dot" data-section="apropos"></a>
+        <a href="#soins" class="dot" data-section="soins"></a>
+        <a href="#avis" class="dot" data-section="avis"></a>
+        <a href="#tarifs" class="dot" data-section="tarifs"></a>
+        <a href="#infos" class="dot" data-section="infos"></a>
+        <a href="#cartes" class="dot" data-section="cartes"></a>
+        <a href="#rdv" class="dot" data-section="rdv"></a>
     </div>
 
-    <div class="service-card">
-      <h3>Réflexologie Plantaire — 45 min</h3>
-      <p>
-        Une technique qui travaille sur les zones réflexes du pied pour soutenir l’équilibre général du corps.
-        Elle favorise la détente, aide à relâcher les tensions et peut accompagner le mieux‑être digestif,
-        nerveux ou circulatoire.
-        Un soin simple et efficace pour apaiser le corps en profondeur.
-      </p>
-    </div>
+    <header id="header" class="header">
+        <div class="container">
+            <h1>Vitality & Bien-être</h1>
+            <p class="tagline">Des soins bien‑être pour les femmes,<br>dans un cadre calme et naturel.</p>
+            <a href="https://calendly.com/mariana-tofan/massage-1-h" class="btn btn-primary" target="_blank">📅 Réserver un soin</a>
+        </div>
+    </header>
 
-    <div class="service-card">
-      <h3>Massage Tui Na — 1h</h3>
-      <p>
-        Un massage issu de la tradition chinoise, connu pour son action en profondeur.
-        Il aide à réduire les tensions musculaires et nerveuses, améliorer la circulation,
-        diminuer la fatigue et soutenir les défenses naturelles.
-        Le Tui Na est particulièrement apprécié pour soulager les raideurs, les maux chroniques,
-        les tensions du dos ou les périodes de stress.
-      </p>
-    </div>
+    <main>
+        <section id="parenthese" class="parenthese fade-section">
+            <div class="container">
+                <h2>Votre Parenthèse Bien‑être</h2>
+                <p>Un espace calme et naturel, réservé aux femmes, pour faire une pause dans le rythme du quotidien. Ici, on prend le temps de se détendre, sans pression et sans artifice. Chaque soin est proposé avec douceur, en respectant les besoins de chacune.</p>
+            </div>
+        </section>
 
-  </div>
-</section>
+        <section id="apropos" class="apropos fade-section">
+            <div class="container">
+                <h2>À propos de moi</h2>
+                <div class="apropos-content">
+                    <p>Je m’appelle Mariana et je suis praticienne en massages bien‑être. J’accompagne uniquement les femmes, dans un cadre calme et respectueux.</p>
+                    <p>Mon approche est simple et naturelle. Je prends le temps d’écouter et d’adapter chaque soin en fonction des besoins de chacune.</p>
+                    <p>Ici, pas de grands discours. Juste un moment pour se poser, se détendre et souffler, en toute simplicité.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="avis" style="padding: 80px 10%; text-align:center;">
-  <h2>Avis</h2>
+        <section id="soins" class="soins fade-section">
+            <div class="container">
+                <h2>Nos Soins</h2>
+                <div class="soins-grid">
+                    <div class="soin-card">
+                        <h3>💆‍♀️ Massage du Visage</h3>
+                        <p class="duree">1h</p>
+                        <p>Un soin doux et complet, adapté à tous les types de peaux. Il aide à lisser les traits, à détendre les muscles du visage et à tonifier les zones de soutien de la peau. Ce massage est particulièrement apprécié pour prévenir l'apparition des signes de l'âge et retrouver un teint reposé et lumineux.</p>
+                        <p class="prix">45 €</p>
+                    </div>
+                    <div class="soin-card">
+                        <h3>🦶 Réflexologie Plantaire</h3>
+                        <p class="duree">45 min</p>
+                        <p>Une technique qui travaille sur les zones réflexes du pied pour soutenir l'équilibre général du corps. Elle favorise la détente, aide à relâcher les tensions et peut accompagner le mieux-être digestif, nerveux ou circulatoire. Un soin simple et efficace pour apaiser le corps en profondeur.</p>
+                        <p class="prix">45 €</p>
+                    </div>
+                    <div class="soin-card">
+                        <h3>✨ Massage Tui Na</h3>
+                        <p class="duree">1h</p>
+                        <p>Un massage issu de la tradition chinoise, connu pour son action en profondeur. Il aide à réduire les tensions musculaires et nerveuses, améliorer la circulation, diminuer la fatigue et soutenir les défenses naturelles. Le Tui Na est particulièrement apprécié pour soulager les raideurs, les maux chroniques, les tensions du dos ou les périodes de stress.</p>
+                        <p class="prix">60 €</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="avis" class="avis fade-section">
+            <div class="container">
+                <h2>⭐ Avis</h2>
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
-</section>
+        </section>
 
-<section id="tarifs" style="background:#FAF9F6; text-align:center;">
-  <h2>Tarifs</h2>
+        <section id="tarifs" class="tarifs fade-section">
+            <div class="container">
+                <h2>💰 Tarifs</h2>
+                <ul class="tarifs-list">
+                    <li>💆‍♀️ Massage du Visage — 45 €</li>
+                    <li>🦶 Réflexologie Plantaire — 45 €</li>
+                    <li>✨ Massage Tui Na — 60 €</li>
+                </ul>
+            </div>
+        </section>
 
-  <div style="
-    max-width:900px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-    gap:30px;
-  ">
-    <div class="service-card"><h3>Massage du Visage — 45 €</h3></div>
-    <div class="service-card"><h3>Réflexologie Plantaire — 45 €</h3></div>
-    <div class="service-card"><h3>Massage Tui Na — 60 €</h3></div>
-  </div>
-</section>
+        <section id="infos" class="infos fade-section">
+            <div class="container">
+                <h2>📍 Infos & Contact</h2>
+                <div class="infos-card">
+                    <p><strong>Mariana Tofan – Vitality & Bien-Être</strong><br>Castelnaudary (zone Saint-Roch)</p>
+                    <p>📞 <a href="tel:+33606413160">06 06 41 31 60</a><br>
+                    ✉️ <a href="mailto:m.tofan@outlook.fr">m.tofan@outlook.fr</a><br>
+                    🕒 Sur rendez-vous uniquement</p>
+                    <div class="infos-links">
+                        <a href="https://www.google.com/maps/place/Mariana+Tofan+~+Vitality+%26+Bien+Etre/@43.2951323,1.9175174" target="_blank" class="btn-secondary">🗺️ Voir sur Google Maps</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=43.2951284,1.9200977" target="_blank" class="btn-secondary">🚗 Itinéraire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="cartes-cadeaux" style="background:#F4EFEA; text-align:center;">
-  <h2>Cartes Cadeaux</h2>
-  <p>Offrez un moment simple et apaisant à une femme de votre entourage.</p>
-  <a href="#reservation" class="btn" style="margin-top:20px;">Offrir une carte cadeau</a>
-</section>
+        <section id="cartes" class="cartes fade-section">
+            <div class="container">
+                <h2>🎁 Cartes Cadeaux</h2>
+                <p>Offrez un moment simple et apaisant à une femme de votre entourage.</p>
+                <a href="#" class="btn btn-secondary">Offrir une carte cadeau</a>
+            </div>
+        </section>
 
-<section id="reservation" style="background:#F4EFEA; text-align:center;">
-  <h2>Réserver un soin</h2>
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/mariana-tofan/massage-1-h"
-       style="min-width:320px;height:800px;">
-  </div>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-</section>
+        <section id="rdv" class="calendly-section fade-section">
+            <div class="container">
+                <h2>📅 Prendre rendez-vous</h2>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/mariana-tofan/massage-1-h" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </section>
+    </main>
 
-<footer>
-  © 2026 Vitality & Bien-être – Réservé aux femmes
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <p>© Vitality & Bien-être – Mariana Tofan – Castelnaudary</p>
+            <p><a href="sitemap.xml">Plan du site</a> | <a href="#">Mentions légales</a></p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
+    
+    <!-- Script pour l'effet de fondu au scroll et l'activation des ancres -->
+    <script>
+        (function() {
+            // Sélectionne toutes les sections avec effet de fondu
+            const fadeSections = document.querySelectorAll('.fade-section');
+            const dots = document.querySelectorAll('.dot');
+            
+            // Crée un observateur pour l'effet de fondu
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+            
+            fadeSections.forEach(section => {
+                fadeObserver.observe(section);
+                // Ajoute la classe de base pour la transition
+                section.classList.add('fade-transition');
+            });
+            
+            // Active le premier élément visible au chargement
+            setTimeout(() => {
+                const sections = document.querySelectorAll('section[id], header[id]');
+                const scrollPos = window.scrollY + 150;
+                
+                let currentIndex = 0;
+                for (let i = 0; i < sections.length; i++) {
+                    const section = sections[i];
+                    const sectionTop = section.offsetTop;
+                    if (scrollPos >= sectionTop) {
+                        currentIndex = i;
+                    }
+                }
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.remove('active');
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    }
+                });
+            }, 100);
+            
+            // Suit la section visible pendant le scroll (pour les ancres)
+            window.addEventListener('scroll', () => {
+                const sections = document.querySelectorAll('section[id], header[id]');
+                const scrollPos = window.scrollY + 150;
+                
+                let currentIndex = 0;
+                for (let i = 0; i < sections.length; i++) {
+                    const section = sections[i];
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        currentIndex = i;
+                        break;
+                    }
+                    if (scrollPos >= sectionTop) {
+                        currentIndex = i;
+                    }
+                }
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.remove('active');
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    }
+                });
+            });
+            
+            // Scroll fluide quand on clique sur un cercle
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = dot.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

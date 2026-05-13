@@ -148,13 +148,19 @@
       background: white;
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       border: 1px solid #C6A75E20;
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
     }
 
     footer {
-      background: #6B8E7A;
+      background: #B8954F;
       color: white;
       padding: 40px;
       text-align: center;
@@ -164,6 +170,73 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2rem; }
       section { padding: 70px 8%; }
+    }
+
+    /* ===== ANCRES DISCRÈTES ===== */
+    .nav-dots {
+      position: fixed;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(4px);
+      padding: 8px 6px;
+      border-radius: 30px;
+      transition: opacity 0.3s;
+    }
+
+    .nav-dots:hover {
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .dot {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #C6A75E;
+      opacity: 0.35;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .dot:hover {
+      opacity: 0.7;
+      transform: scale(1.3);
+    }
+
+    .dot.active {
+      opacity: 1;
+      background-color: #C6A75E;
+      transform: scale(1.4);
+    }
+
+    /* ===== EFFET DE FONDU AU SCROLL ===== */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .nav-dots {
+        right: 8px;
+        gap: 6px;
+        padding: 6px 4px;
+      }
+      .dot {
+        width: 5px;
+        height: 5px;
+      }
     }
   </style>
 
@@ -179,6 +252,18 @@
 </head>
 
 <body>
+
+<!-- ===== ANCRES DISCRÈTES ===== -->
+<div class="nav-dots">
+  <a href="#hero-section" class="dot active"></a>
+  <a href="#about" class="dot"></a>
+  <a href="#mariana" class="dot"></a>
+  <a href="#soins" class="dot"></a>
+  <a href="#avis" class="dot"></a>
+  <a href="#tarifs" class="dot"></a>
+  <a href="#cartes-cadeaux" class="dot"></a>
+  <a href="#reservation" class="dot"></a>
+</div>
 
 <header>
   <div style="font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:600;">
@@ -208,14 +293,14 @@
   };
 </script>
 
-<section class="hero">
+<section id="hero-section" class="hero fade-section">
   <div class="hero-content">
     <h1>Des soins bien‑être pour les femmes, dans un cadre calme et naturel.</h1>
     <a href="#reservation" class="btn">Réserver un soin</a>
   </div>
 </section>
 
-<section id="about" class="about">
+<section id="about" class="about fade-section">
   <h2>Votre Parenthèse Bien‑être</h2>
   <p>
     Un espace calme et naturel, réservé aux femmes, pour faire une pause dans le rythme du quotidien.
@@ -224,7 +309,7 @@
   </p>
 </section>
 
-<section id="mariana" class="apropos">
+<section id="mariana" class="apropos fade-section">
   <h2>À propos de moi</h2>
   <p>
     Je m’appelle Mariana et je suis praticienne en massages bien‑être.
@@ -240,7 +325,7 @@
   </p>
 </section>
 
-<section id="soins">
+<section id="soins" class="fade-section">
   <h2>Nos Soins</h2>
 
   <div class="services">
@@ -279,13 +364,13 @@
   </div>
 </section>
 
-<section id="avis" style="padding: 80px 10%; text-align:center;">
+<section id="avis" class="fade-section" style="padding: 80px 10%; text-align:center;">
   <h2>Avis</h2>
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-51ebe364-7d5c-4f06-9a24-5b6aa56ef668" data-elfsight-app-lazy></div>
 </section>
 
-<section id="tarifs" style="background:#FAF9F6; text-align:center;">
+<section id="tarifs" class="fade-section" style="background:#FAF9F6; text-align:center;">
   <h2>Tarifs</h2>
 
   <div style="
@@ -301,13 +386,13 @@
   </div>
 </section>
 
-<section id="cartes-cadeaux" style="background:#F4EFEA; text-align:center;">
+<section id="cartes-cadeaux" class="fade-section" style="background:#F4EFEA; text-align:center;">
   <h2>Cartes Cadeaux</h2>
   <p>Offrez un moment simple et apaisant à une femme de votre entourage.</p>
   <a href="#reservation" class="btn" style="margin-top:20px;">Offrir une carte cadeau</a>
 </section>
 
-<section id="reservation" style="background:#F4EFEA; text-align:center;">
+<section id="reservation" class="fade-section" style="background:#F4EFEA; text-align:center;">
   <h2>Réserver un soin</h2>
   <div class="calendly-inline-widget"
        data-url="https://calendly.com/mariana-tofan/massage-1-h"
@@ -319,6 +404,85 @@
 <footer>
   © 2026 Vitality & Bien-être – Réservé aux femmes
 </footer>
+
+<!-- Script pour l'effet de fondu au scroll et l'activation des ancres -->
+<script>
+  (function() {
+    const fadeSections = document.querySelectorAll('.fade-section');
+    const dots = document.querySelectorAll('.dot');
+    
+    // Observateur pour l'effet de fondu
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    
+    fadeSections.forEach(section => {
+      fadeObserver.observe(section);
+    });
+    
+    // Mise à jour du cercle actif pendant le scroll
+    function updateActiveDot() {
+      const sections = [
+        document.getElementById('hero-section'),
+        document.getElementById('about'),
+        document.getElementById('mariana'),
+        document.getElementById('soins'),
+        document.getElementById('avis'),
+        document.getElementById('tarifs'),
+        document.getElementById('cartes-cadeaux'),
+        document.getElementById('reservation')
+      ];
+      
+      const scrollPos = window.scrollY + 200;
+      let activeIndex = 0;
+      
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            activeIndex = i;
+            break;
+          }
+          if (scrollPos >= sectionTop) {
+            activeIndex = i;
+          }
+        }
+      }
+      
+      dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === activeIndex) {
+          dot.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', updateActiveDot);
+    window.addEventListener('resize', updateActiveDot);
+    setTimeout(updateActiveDot, 100);
+    
+    // Scroll fluide au clic sur un cercle
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionsIds = ['hero-section', 'about', 'mariana', 'soins', 'avis', 'tarifs', 'cartes-cadeaux', 'reservation'];
+        const targetElement = document.getElementById(sectionsIds[index]);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

@@ -1,277 +1,245 @@
-/* STYLE GLOBAL */
-body {
+/* ===== RESET & BASE ===== */
+* {
     margin: 0;
-    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f5f7f2;
-    color: #333;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-/* HERO */
-.hero {
-    position: relative;
-    /* nouvelle photo plus chaleureuse */
-    background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.35); /* un peu moins sombre pour mieux voir la photo */
-}
-
-.hero-content {
-    position: relative;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-/* BADGE ENGLISH */
-.lang-badge {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    background: rgba(255, 255, 255, 0.9);
-    color: #2f5f3a;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-/* BOUTON PRINCIPAL */
-.cta {
-    background: #8fbf7f;
-    padding: 12px 25px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.cta:hover {
-    background: #7aad6f;
-}
-
-/* SECTIONS GÉNÉRALES */
-section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    color: #6a8f6b;
-    margin-bottom: 40px;
-}
-
-/* À PROPOS */
-.about p {
-    max-width: 800px;
-    margin: 0 auto 15px auto;
-    text-align: center;
-}
-
-.about-english {
-    text-align: center;
-    font-style: italic;
-    color: #4f6f50;
-}
-
-/* SERVICES */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.service-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.service-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.service-card h3 {
-    margin: 15px 0 5px;
-    color: #6a8f6b;
-}
-
-.service-card p {
-    padding: 0 15px 20px;
-}
-
-/* GALERIE */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-    height: 180px;
-    object-fit: cover;
-}
-
-/* HORAIRES */
-.hours ul {
-    list-style: none;
     padding: 0;
-    text-align: center;
-}
-
-.hours li {
-    margin-bottom: 8px;
-}
-
-/* AVIS */
-.reviews blockquote {
-    background: white;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 800px;
-    border-left: 5px solid #8fbf7f;
-    border-radius: 5px;
-    font-style: italic;
-    position: relative;
-}
-
-.review-author {
-    display: block;
-    margin-top: 10px;
-    font-weight: 600;
-    color: #4f6f50;
-    font-style: normal;
-}
-
-/* CONTACT */
-.contact {
-    text-align: center;
-}
-
-.contact p {
-    margin: 5px 0;
-}
-
-/* FORMULAIRE DE CONTACT */
-.contact-form {
-    background: #e9f1e6;
-    border-radius: 12px;
-    padding: 50px 20px;
-    max-width: 900px;
-}
-
-.contact-form p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #3f5f40;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #c5d5c2;
-    font-family: inherit;
-    font-size: 1rem;
     box-sizing: border-box;
 }
 
-textarea {
-    resize: vertical;
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #FDFBF7;
+    color: #2D3E2B;
+    line-height: 1.5;
 }
 
-.form-note {
-    margin-top: 15px;
-    font-size: 0.9rem;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* ===== TYPOGRAPHIE ===== */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #4A6B4A;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #4A6B4A;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #C9A87C;
+    padding-left: 1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #5C7C5A;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== BOUTONS ===== */
+.btn, .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
     text-align: center;
-    color: #4f6f50;
+    cursor: pointer;
 }
 
-.form-note a {
-    color: #2f5f3a;
+.btn-primary {
+    background-color: #7B9E7B;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5C7C5A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #7B9E7B;
+    border: 2px solid #7B9E7B;
+}
+
+.btn-secondary:hover {
+    background-color: #7B9E7B;
+    color: white;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(135deg, #F0F0E8 0%, #E8E4D8 100%);
+    text-align: center;
+    padding: 2rem 0 3rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #6B5B4B;
+    margin: 1rem 0 1.5rem;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    margin: 2rem 0;
+}
+
+.apropos, .infos, .cartes, .calendly-section {
+    background-color: #F7F4EE;
+    border-radius: 32px;
+    margin: 2rem 0;
+}
+
+/* ===== GRILLE DES SOINS ===== */
+.soins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-top: 1rem;
+}
+
+.soin-card {
+    background: white;
+    border-radius: 28px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.soin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.duree {
+    font-size: 0.9rem;
+    color: #C9A87C;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.prix {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4A6B4A;
+    margin-top: 1rem;
+}
+
+/* ===== TARIFS ===== */
+.tarifs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tarifs-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #E8E4D8;
+    font-size: 1.1rem;
+}
+
+/* ===== CARTE INFOS ===== */
+.infos-card {
+    background: white;
+    border-radius: 28px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.infos-card p {
+    margin-bottom: 0.8rem;
+}
+
+.infos-card a {
+    color: #7B9E7B;
+    text-decoration: none;
+}
+
+.infos-card a:hover {
     text-decoration: underline;
 }
 
-/* FOOTER */
-footer {
-    background: #6a8f6b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.infos-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.2rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .hero {
-        height: 70vh;
-    }
+/* ===== AVIS ===== */
+.avis {
+    text-align: center;
+}
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #E8E4D8;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
 
-    .hero p {
-        font-size: 1.1rem;
-    }
+.footer a {
+    color: #4A6B4A;
+    text-decoration: none;
+}
 
-    .lang-badge {
-        position: static;
-        margin-bottom: 10px;
+/* ===== RESPONSIVE (MOBILE FIRST) ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
     }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .soins-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.95rem;
+    }
+    
+    .infos-links {
+        flex-direction: column;
+    }
+    
+    .infos-links .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .calendly-inline-widget {
+        height: 600px !important;
+    }
+}
+
+/* ===== PETITS DÉTAILS ===== */
+::selection {
+    background-color: #C9A87C;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

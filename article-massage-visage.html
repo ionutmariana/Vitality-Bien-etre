@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Massage du visage : pourquoi ça change tout – Vitality & Bien-être</title>
+
+  <meta name="description" content="Massage du visage à Castelnaudary : bienfaits sur la peau, les traits et la détente. Pourquoi offrir ce soin à son visage." />
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ionutmariana/Vitality-Bien-etre/main/hero-massage4.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #FAF9F6;
+      color: #2E2E2E;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2E2E2E;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      color: #C6A75E;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    #menu-btn {
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    #menu-btn span {
+      height: 3px;
+      background:#2E2E2E;
+      border-radius:3px;
+    }
+
+    #mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100%;
+      background: white;
+      box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+      padding: 80px 30px;
+      transition: 0.4s ease;
+      z-index: 999;
+    }
+
+    #mobile-menu a {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #2E2E2E;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 120px 20px 60px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #C6A75E;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      background: #C6A75E;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #b8954f;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #C6A75E;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #B8954F;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 100px 16px 40px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div id="menu-btn">
+    <span></span><span></span><span></span>
+  </div>
+  <div style="font-family:'Playfair Display', serif; font-size:1.4rem; font-weight:600;">
+    Vitality & Bien-être
+  </div>
+</header>
+
+<nav id="mobile-menu">
+  <a href="index.html">Accueil</a>
+  <a href="blog.html">📝 Blog & Conseils</a>
+  <a href="index.html#about">Votre Parenthèse Bien-être</a>
+  <a href="index.html#soins">Nos Soins</a>
+  <a href="index.html#mariana">À propos de moi</a>
+  <a href="index.html#avis">Avis</a>
+  <a href="index.html#tarifs">Tarifs</a>
+  <a href="index.html#cartes-cadeaux">Cartes Cadeaux</a>
+  <a href="index.html#reservation">Réserver</a>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.onclick = () => {
+    if (mobileMenu.style.left === "0px") {
+      mobileMenu.style.left = "-100%";
+    } else {
+      mobileMenu.style.left = "0px";
+    }
+  };
+
+  document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.style.left = "-100%";
+    });
+  });
+</script>
+
+<div class="container">
+  <h1>Massage du visage : pourquoi ça change tout</h1>
+  <div class="article-meta">📅 28 avril 2026 · ✨ 4 min de lecture</div>
+
+  <div class="article-content">
+    <p>
+      On hydrate, on maquille, on nettoie. Mais rarement on <strong>mobilise</strong> les muscles du visage. 
+      Pourtant, ils travaillent sans cesse : on sourit, on fronce, on serre la mâchoire, on plisse les yeux devant un écran.
+    </p>
+
+    <h2>Le visage, miroir des tensions</h2>
+    <p>
+      Une mâchoire crispée, c'est souvent du stress refoulé. Des rides entre les sourcils, des heures à se concentrer. 
+      Un regard fatigué, des nuits agitées. Le visage <strong>raconte notre état intérieur</strong>, même quand on croit bien le masquer.
+    </p>
+
+    <h2>Ce qu'un vrai massage du visage peut libérer</h2>
+    <p>
+      En une heure, on travaille chaque zone : front, tempes, pommettes, mâchoire, contour des yeux, cou et décolleté. 
+      Les gestes sont lents, précis, doux mais fermes. On relâche les points de crispation, on lisse les traits, 
+      on active la microcirculation.
+    </p>
+    <p>
+      Résultat : un teint <strong>plus lumineux</strong>, des traits <strong>reposés</strong>, et parfois quelques larmes qui coulent – 
+      parce que le visage libère aussi des émotions enfouies.
+    </p>
+
+    <h2>Un soin anti-âge naturel</h2>
+    <p>
+      Pas besoin de crème miracle. Un massage régulier entretient l
